@@ -1,18 +1,15 @@
 import "./Modal.css";
 
-function Modal({ propName }) {
+function Modal({ propName, onTodoUndelete }) {
   return (
     <>
       <div className="modal">
         <p className="modal__title">{propName}</p>
         <div className="modal__buttons">
-          <button
-            onClick={() => console.log("Cancel")}
-            className="btn btn__cancel"
-          >
+          <button onClick={onTodoUndelete} className="btn btn__cancel">
             Cancel
           </button>
-          <button onClick={() => console.log("Confirm")} className="btn">
+          <button onClick={onTodoUndelete} className="btn">
             Confirm
           </button>
         </div>
